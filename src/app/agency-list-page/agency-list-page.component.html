@@ -1,3 +1,5 @@
-<p>
-  agency-list-page works!
-</p>
+<div>
+  <ul>
+    <li *ngFor="let a of agencyList" (click)="showDetail(a)">{{a.name}}</li>
+  </ul>
+</div>
