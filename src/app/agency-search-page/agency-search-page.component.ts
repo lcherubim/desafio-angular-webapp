@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { AgencyService } from '../services/agency.service';
 
 @Component({
   selector: 'app-agency-search-page',
@@ -7,7 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgencySearchPageComponent implements OnInit {
 
-  constructor() { }
+  public search() {
+    this.agency.search();
+    this.router.navigate(['agencias']);
+  }
+
+  constructor(
+    private agency: AgencyService,
+    private router: Router) { }
 
   ngOnInit() {
   }
