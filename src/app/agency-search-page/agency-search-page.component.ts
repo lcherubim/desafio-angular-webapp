@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { LocationService } from '../services/location.service';
+import { CustomValidators } from './../models/custom-validators';
 import { AgencyService } from '../services/agency.service';
 
 declare var google;
@@ -53,7 +54,7 @@ export class AgencySearchPageComponent implements OnInit {
 
   ngOnInit() {
     this.searchForm = this.formBuilder.group({
-      radius: [null, [Validators.required]]
+      radius: [null, [Validators.required, CustomValidators.isValidRadius()]]
     });
   }
 
