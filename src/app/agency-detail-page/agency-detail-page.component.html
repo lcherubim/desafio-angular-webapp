@@ -1,4 +1,10 @@
-<div>
-  <h3>{{ selectedAgency.name }}</h3>
-  <button (click)="back()" >Voltar</button>
+<div class="detail-card-container">
+  <div class="detail-card">
+    <h3>{{ selectedAgency.name }}</h3>
+    <p>Telefone: {{ selectedAgency.formatted_phone_number }}</p>
+    <p>Horário de funcionamento: {{ selectedAgency.opening_hours.weekday_text[0] }}, {{ selectedAgency.opening_hours.weekday_text[1] }}, {{ selectedAgency.opening_hours.weekday_text[2] }}, {{ selectedAgency.opening_hours.weekday_text[3] }}, {{ selectedAgency.opening_hours.weekday_text[4] }}, {{ selectedAgency.opening_hours.weekday_text[5] }}, {{ selectedAgency.opening_hours.weekday_text[6] }}</p>
+    <div class="button-container">
+      <button (click)="back()">Voltar para lista</button>
+    </div>
+  </div>
 </div>

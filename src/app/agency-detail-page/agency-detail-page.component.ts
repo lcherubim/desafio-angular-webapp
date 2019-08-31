@@ -1,9 +1,8 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
+import { AgencyDetail } from './../models/agency.model';
 import { AgencyService } from './../services/agency.service';
-import { Agency } from './../models/agency.model';
-import { isDefined } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-agency-detail-page',
@@ -12,7 +11,15 @@ import { isDefined } from '@angular/compiler/src/util';
 })
 export class AgencyDetailPageComponent implements OnInit {
 
-  public selectedAgency = new Agency();
+  public isLoading = true;
+
+  public selectedAgency: AgencyDetail = {
+    name: null,
+    formatted_phone_number: null,
+    opening_hours: {
+        weekday_text: [null, null, null, null, null, null, null]
+    }
+  };
 
   public back() {
     this.router.navigate(['agencias']);
