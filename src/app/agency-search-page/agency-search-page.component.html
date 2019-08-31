@@ -1,5 +1,15 @@
-<div>
-  <h3>ENCONTRE AS AGÊNCIAS MAIS PRÓXIMAS A VOCÊ</h3>
-  <button (click)="search()" >BUSCAR</button>  
+<div class="container">
+  <app-activity-indicator *ngIf="isLoading"></app-activity-indicator>
+  <form [formGroup]="searchForm" (ngSubmit)="search()" *ngIf="!isLoading">
+    <img src="assets/logo.png">
+    <h3>ENCONTRE AGÊNCIAS <br /> PRÓXIMAS A VOCÊ</h3>
+    <div class="form-group">
+      <input type="text" formControlName="radius" placeholder="Raio (Mín. 1 e Máx. 50km)"/>
+      <p class="invalid-feedback" [hidden]="searchForm.get('radius').valid || searchForm.get('radius').untouched">Informe o raio em Km (Máximo de
+        50 Km)</p>
+    </div>
+    <button type="submit">Pesquisar</button>
+  </form>
 </div>
 
+<div #map id="map" style="display: none"></div>
