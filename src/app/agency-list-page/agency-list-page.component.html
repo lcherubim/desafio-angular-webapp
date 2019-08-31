@@ -1,5 +1,8 @@
-<div>
-  <ul>
-    <li *ngFor="let a of agencyList" (click)="showDetail(a)">{{a.name}}</li>
-  </ul>
-</div>
+<app-activity-indicator *ngIf="isLoading" class="center"></app-activity-indicator>
+<ul *ngIf="!isLoading">
+  <li *ngFor="let a of agencyList" (click)="showDetail(a)">
+    <h3>{{ a.name }}</h3>
+    <p>{{ a.vicinity }}</p>
+  </li>
+</ul>
+<div #map id="map" style="display: none"></div>
