@@ -1,4 +1,9 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+
+import { AgencyService } from './../services/agency.service';
+import { Agency } from './../models/agency.model';
+import { isDefined } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-agency-detail-page',
@@ -7,9 +12,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgencyDetailPageComponent implements OnInit {
 
-  constructor() { }
+  public selectedAgency = new Agency();
+
+  public back() {
+    this.router.navigate(['agencias']);
+  }
+
+  constructor(
+    private agency: AgencyService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
+    if (this.agency.selectedAgency.constructor === Object) {
+      this.selectedAgency = this.agency.selectedAgency;
+    } else {
+      this.router.navigate(['']);
+    }
   }
 
 }
