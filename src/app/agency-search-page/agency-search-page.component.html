@@ -1,7 +1,9 @@
 <div class="container">
   <app-activity-indicator *ngIf="isLoading"></app-activity-indicator>
   <form [formGroup]="searchForm" (ngSubmit)="search()" *ngIf="!isLoading">
-    <img src="assets/logo.png">
+    <a href="https://www.itau.com.br">
+        <img src="assets/logo.png">
+    </a>
     <h3>Encontre Agências<br />próximas a você</h3>
     <div class="form-group">
       <input type="text" formControlName="radius" type="text" placeholder="Informe o raio em km" mask="90" suffix="km" />
