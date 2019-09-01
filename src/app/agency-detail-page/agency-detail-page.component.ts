@@ -8,7 +8,6 @@ import { UserDeviceService } from './../services/user-device.service';
 import { LocationService } from './../services/location.service';
 import { environment } from './../../environments/environment';
 
-
 @Component({
   selector: 'app-agency-detail-page',
   templateUrl: './agency-detail-page.component.html',
@@ -25,10 +24,6 @@ export class AgencyDetailPageComponent implements OnInit {
       weekday_text: [null, null, null, null, null, null, null]
     }
   };
-
-  public back() {
-    this.router.navigate(['agencias']);
-  }
 
   public registerAccessData() {
     const url = environment.apiUrl;
