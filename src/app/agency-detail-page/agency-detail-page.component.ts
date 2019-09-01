@@ -6,6 +6,8 @@ import { AgencyDetail } from './../models/agency.model';
 import { AgencyService } from './../services/agency.service';
 import { UserDeviceService } from './../services/user-device.service';
 import { LocationService } from './../services/location.service';
+import { environment } from './../../environments/environment';
+
 
 @Component({
   selector: 'app-agency-detail-page',
@@ -29,7 +31,7 @@ export class AgencyDetailPageComponent implements OnInit {
   }
 
   public registerAccessData() {
-    const url = 'http://localhost:3000/registros';
+    const url = environment.apiUrl;
     const body = {
       Id: 0,
       Latitude: this.user.userPosition.coords.latitude,
