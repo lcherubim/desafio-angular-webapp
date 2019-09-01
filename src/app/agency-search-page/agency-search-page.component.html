@@ -4,8 +4,8 @@
     <img src="assets/logo.png">
     <h3>Encontre Agências<br />próximas a você</h3>
     <div class="form-group">
-      <input type="text" formControlName="radius" type="number" placeholder="Informe o raio em km"/>
-      <p class="invalid-feedback" [hidden]="searchForm.get('radius').valid || searchForm.get('radius').untouched">Obrigatório, min. 1 e máx. 50 Km</p>
+      <input type="text" formControlName="radius" type="text" placeholder="Informe o raio em km" mask="00" suffix="km" />
+      <p class="invalid-feedback" [hidden]="searchForm.get('radius').valid || searchForm.get('radius').untouched">Obrigatório, min. 1 e máx. 50km</p>
     </div>
     <button type="submit">Pesquisar</button>
   </form>

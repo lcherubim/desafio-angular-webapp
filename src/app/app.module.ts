@@ -10,6 +10,9 @@ import { AgencyListPageComponent } from './agency-list-page/agency-list-page.com
 import { AgencyDetailPageComponent } from './agency-detail-page/agency-detail-page.component';
 import { ActivityIndicatorComponent } from './activity-indicator/activity-indicator.component';
 import { DeviceDetectorModule } from 'ngx-device-detector';
+import {NgxMaskModule, IConfig} from 'ngx-mask';
+
+let options: Partial<IConfig> | (() => Partial<IConfig>);
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { DeviceDetectorModule } from 'ngx-device-detector';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    DeviceDetectorModule.forRoot()
+    DeviceDetectorModule.forRoot(),
+    NgxMaskModule.forRoot(options)
   ],
   providers: [],
   bootstrap: [AppComponent]
