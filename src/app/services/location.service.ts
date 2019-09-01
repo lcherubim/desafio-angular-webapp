@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { UserPosition } from '../models/UserPosition.model';
+import { UserPosition } from '../models/user-position.model';
 
 @Injectable({
   providedIn: 'root'
