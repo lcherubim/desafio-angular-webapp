@@ -42,7 +42,7 @@ Para fins de demonstração, a aplicação foi publicada no www.netlify.com, faz
 
 Confira a demo em: https://desafio-angular-webapp.netlify.com
 
-Objetivo: pesquisar agências próximas a localização do usuário em um raio de x km e salvar informações do acesso (localização, device, browser e numero da agência) em um banco de dados.
+Objetivo: pesquisar agências próximas a localização do usuário em um raio de x km e salvar informações do acesso (localização, device, browser e numero da agência) em um banco de dados. (Obs: só são registrados no banco informações de acesso do usuário que fes a pesquisa e abriu algum agencia no detalhe). Para verificar os registros do banco: https://desafio-nodejs-webapi.herokuapp.com/registros.
 
 ## API
 
