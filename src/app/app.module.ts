@@ -10,9 +10,9 @@ import { AgencyListPageComponent } from './agency-list-page/agency-list-page.com
 import { AgencyDetailPageComponent } from './agency-detail-page/agency-detail-page.component';
 import { ActivityIndicatorComponent } from './activity-indicator/activity-indicator.component';
 import { DeviceDetectorModule } from 'ngx-device-detector';
-import {NgxMaskModule, IConfig} from 'ngx-mask';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
 
-let options: Partial<IConfig> | (() => Partial<IConfig>);
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
