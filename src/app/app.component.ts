@@ -1,6 +1,8 @@
+import { UserDeviceService } from './services/user-device.service';
 import { Component, OnInit } from '@angular/core';
 
 import { LocationService } from './services/location.service';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +11,15 @@ import { LocationService } from './services/location.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private get: LocationService) {}
+
+  constructor(
+    private user: LocationService,
+    private get: UserDeviceService
+  ) { }
 
   ngOnInit() {
-    this.get.getUserPosition();
+    this.user.getUserPosition();
+    this.get.DeviceInfo();
   }
 }
 
