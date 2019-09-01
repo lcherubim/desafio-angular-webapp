@@ -8,14 +8,11 @@ export class CustomValidators {
 
             const radius = control.value;
 
-            if (radius) {
-
-                if (radius > 50 || radius < 1) {
-                    return { radiusNotValid: true };
-                }
-
-                return null;
+            if (radius > 50 || radius < 1) {
+                return { radiusNotValid: true };
             }
+
+            return null;
         };
     }
 
