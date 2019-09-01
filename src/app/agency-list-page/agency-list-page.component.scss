@@ -20,10 +20,12 @@ li {
   cursor: pointer;
   background: white;
   text-align: center;
+  box-shadow: 1px 1px 4px #041b5f;
 }
 
 li:hover {
   background: #ec7000;
+  box-shadow: 4px 4px 10px #041b5f;
 }
 
 li:hover h3 {
@@ -42,10 +44,22 @@ li:hover p {
   justify-content: center;
 }
 
+button {
+  width: 100%;
+  box-shadow: 1px 1px 6px #032894;
+}
+
+button:hover {
+  box-shadow: 1px 1px 6px #021f73;
+}
+
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   ul {
     padding: 20px 40px;
+  }
+  button {
+    width: 60%
   }
 }
 
@@ -56,6 +70,9 @@ li:hover p {
   }
   ul {
     padding: 40px 80px;
+  }
+  button {
+    width: 40%
   }
 }
 

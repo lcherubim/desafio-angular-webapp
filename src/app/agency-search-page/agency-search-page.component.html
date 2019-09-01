@@ -2,14 +2,12 @@
   <app-activity-indicator *ngIf="isLoading"></app-activity-indicator>
   <form [formGroup]="searchForm" (ngSubmit)="search()" *ngIf="!isLoading">
     <img src="assets/logo.png">
-    <h3>ENCONTRE AGÊNCIAS <br /> PRÓXIMAS A VOCÊ</h3>
+    <h3>Encontre Agências<br />próximas a você</h3>
     <div class="form-group">
-      <input type="text" formControlName="radius" placeholder="Raio (Mín. 1 e Máx. 50km)"/>
-      <p class="invalid-feedback" [hidden]="searchForm.get('radius').valid || searchForm.get('radius').untouched">Informe o raio em Km (Máximo de
-        50 Km)</p>
+      <input type="text" formControlName="radius" type="number" placeholder="Informe o raio em km"/>
+      <p class="invalid-feedback" [hidden]="searchForm.get('radius').valid || searchForm.get('radius').untouched">Obrigatório min. 1 e máx. 50 Km</p>
     </div>
     <button type="submit">Pesquisar</button>
   </form>
 </div>
-
 <div #map id="map" style="display: none"></div>
