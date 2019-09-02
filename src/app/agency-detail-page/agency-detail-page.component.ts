@@ -30,7 +30,7 @@ export class AgencyDetailPageComponent implements OnInit {
     const body = {
       Id: 0,
       Latitude: this.user.userPosition.coords.latitude,
-      Longitude: this.user.userPosition.coords.latitude,
+      Longitude: this.user.userPosition.coords.longitude,
       Device: this.device.userDeviceInfo.device,
       Browser: this.device.userDeviceInfo.browser,
       Number: this.agency.selectedAgency.formatted_phone_number
